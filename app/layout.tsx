@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Explora, Montserrat } from "next/font/google";
 import "./globals.css";
+import { SmoothCursor } from "@/components/magicui/smooth-cursor";
+import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
+import { BottomDock } from "@/components/bottom-dock";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,6 +12,17 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const explora = Explora({
+  weight: "400",
+  variable: "--font-explora",
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -25,9 +39,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${explora.variable} ${montserrat.variable} antialiased cursor-none`}
       >
-        {children}
+        <InteractiveGridPattern
+          proximity={200}
+          borderColor="rgba(0, 221, 255, 0.05)"
+        >
+          <SmoothCursor />
+          {children}
+          <div className="fixed top-6 left-0 right-0 z-50 pointer-events-none flex justify-center">
+            <div className="pointer-events-auto">
+              <BottomDock />
+            </div>
+          </div>
+        </InteractiveGridPattern>
       </body>
     </html>
   );

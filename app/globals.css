@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+*,
+*::before,
+*::after,
+html,
+body,
+a,
+button,
+input,
+select,
+textarea,
+[role="button"] {
+  cursor: none !important;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,6 +24,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-explora: var(--font-explora);
+  --font-montserrat: var(--font-montserrat);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +39,36 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hide main scrollbar - scrolling handled by content layer */
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Custom scrollbar styling for webkit browsers */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.3);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.5);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 211, 238, 0.3) transparent;
 }
