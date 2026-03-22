@@ -302,7 +302,7 @@ export function InteractiveGridPattern({
             {/* Content layer */}
             {children && (
                 <div
-                    className="relative z-10 h-full w-full overflow-y-auto"
+                    className="relative z-10 h-full w-full overflow-y-auto overflow-x-hidden"
                     style={{
                         scrollbarWidth: 'thin',
                         scrollbarColor: 'rgba(216, 106, 16, 0.3) transparent',

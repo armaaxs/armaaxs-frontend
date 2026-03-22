@@ -3,8 +3,6 @@ export type Project = {
   name: string;
   stack: string;
   description: string;
-  previewImage?: string;
-  previewHref?: string;
 };
 
 export const projects: Project[] = [
@@ -14,8 +12,6 @@ export const projects: Project[] = [
     stack: "React Native • Expo • TTS • EPUB",
     description:
       "Built a mobile app with 75,000 public-domain audiobooks, edge-optimized text-to-speech models for offline inference, and a synchronized EPUB reading experience.",
-    previewImage: "/mimesis/explore.png",
-    previewHref: "/mimesis",
   },
   {
     slug: "ai-workout-tracker",

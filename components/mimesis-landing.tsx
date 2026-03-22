@@ -208,32 +208,32 @@ export function MimesisLanding() {
   };
 
   return (
-    <div className="relative h-[100dvh] overflow-y-auto overflow-x-hidden bg-transparent text-[#e6cfaa]">
+    <div className="relative h-[100dvh] snap-y snap-mandatory scroll-smooth overflow-y-auto overflow-x-hidden bg-transparent text-[#e6cfaa]">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-12rem] top-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#d86a10]/10 blur-3xl" />
         <div className="absolute right-[-10rem] top-[20%] h-[24rem] w-[24rem] rounded-full bg-[#8e6f38]/8 blur-3xl" />
         <div className="absolute bottom-[-8rem] left-[18%] h-[18rem] w-[18rem] rounded-full bg-[#b39a65]/8 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(223,200,166,0.05),transparent_42%),linear-gradient(to_bottom,rgba(255,255,255,0.015),transparent_16%,transparent_84%,rgba(0,0,0,0.18))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(223,200,166,0.05),transparent_42%),linear-gradient(to_bottom,rgba(255,255,255,0.015),transparent_16%,transparent_84%,rgba(0,0,0,0.18))]" />
       </div>
 
-      <main className="relative mx-auto flex w-full max-w-7xl flex-col gap-20 px-4 py-8 sm:px-6 lg:px-8">
-        <section className="grid min-h-[calc(100dvh-4rem)] items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <main className="relative mx-auto flex w-full max-w-[min(96vw,1780px)] flex-col gap-20 px-4 py-8 sm:px-6 lg:px-8 2xl:px-10">
+        <section className="grid min-h-[calc(100dvh-4rem)] snap-start items-center gap-12 lg:grid-cols-[1.14fr_0.86fr] lg:gap-12 xl:grid-cols-[1.18fr_0.82fr] 2xl:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-2xl"
+            className="max-w-[58rem] lg:-translate-y-10 xl:-translate-y-14"
           >
             <div className="inline-flex items-center gap-2 rounded-full border border-[#e4c89c]/15 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.34em] text-[#d1ba95] backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-[#d86a10]" />
               Closed beta opening soon
             </div>
 
-            <h1 className="mt-8 max-w-[10ch] font-explora text-[4.2rem] leading-[0.9] text-[#ead9b8] sm:text-[5.6rem] lg:text-[7.3rem]">
+            <h1 className="mt-8 max-w-[8.5ch] font-explora text-[4.2rem] leading-[0.88] text-[#ead9b8] sm:text-[5.6rem] lg:text-[7.1rem] xl:text-[8.2rem] 2xl:text-[8.8rem]">
               Read and listen in one beautiful place.
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#bca585] sm:text-xl">
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-[#bca585] sm:text-xl xl:max-w-[52rem] xl:text-[1.45rem] xl:leading-9">
               Mimesis turns discovery, listening, and your own bookshelf into a
               calm premium experience. Explore 75,000+ audiobooks, jump into
               search when you know the title, and keep reading without the usual
@@ -277,15 +277,15 @@ export function MimesisLanding() {
             </div>
           </motion.div>
 
-          <div className="relative mx-auto w-full max-w-[440px]">
-            <div className="pointer-events-none absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d86a10]/12 blur-3xl" />
+          <div className="relative mx-auto w-full max-w-[460px] lg:translate-y-8 lg:max-w-[560px] xl:translate-y-12 xl:max-w-[620px] 2xl:translate-y-14 2xl:max-w-[680px]">
+            <div className="pointer-events-none absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d86a10]/12 blur-3xl xl:h-[28rem] xl:w-[28rem]" />
             <ScreenshotCard screenshot={screenshots[0]} priority className="relative z-10" />
           </div>
         </section>
 
         <section
           ref={showcaseRef}
-          className="rounded-[36px] border border-[#e4c89c]/12 bg-black/18 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.25)] sm:p-8"
+          className="snap-start rounded-[36px] border border-[#e4c89c]/12 bg-black/18 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.25)] sm:p-8"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -314,7 +314,7 @@ export function MimesisLanding() {
           </div>
         </section>
 
-        <section className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+        <section className="grid snap-start gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -349,7 +349,7 @@ export function MimesisLanding() {
 
         <section
           ref={signupRef}
-          className="grid gap-8 rounded-[40px] border border-[#e4c89c]/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.14))] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.28)] lg:grid-cols-[0.95fr_1.05fr] lg:p-8"
+          className="grid snap-start gap-8 rounded-[40px] border border-[#e4c89c]/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.14))] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.28)] lg:grid-cols-[0.95fr_1.05fr] lg:p-8"
         >
           <motion.div
             initial={{ opacity: 0, y: 24 }}

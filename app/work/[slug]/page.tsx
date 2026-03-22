@@ -16,24 +16,24 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between text-[#ead9b8] pb-[30px]">
-      <main className="flex flex-col items-center justify-start text-center px-4 w-full pt-28 md:pt-32">
-        <h1 className="font-explora text-[90px] sm:text-[120px] md:text-[150px] lg:text-[180px] leading-[0.8] text-[#ead9b8] italic">
-          {project.name}
-        </h1>
-        <p className="font-montserrat text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-light tracking-wide text-[#bca585] mt-2 mb-12">
-          {project.stack}
-        </p>
+      <div className="min-h-[100dvh] px-4 pb-10 pt-24 text-white sm:pt-28 md:pt-32">
+        <main className="mx-auto flex w-full max-w-7xl flex-col items-center text-center">
+          <h1 className="w-full font-explora text-[clamp(4.25rem,16vw,11.25rem)] leading-[0.82] text-[#ead9b8] italic">
+            {project.name}
+          </h1>
+          <p className="mt-2 w-full max-w-[24ch] font-montserrat text-[clamp(1rem,4vw,2.15rem)] font-light tracking-wide text-[#bca585] sm:max-w-none">
+            {project.stack}
+          </p>
 
-        <div className="max-w-3xl w-full border border-[#e4c89c]/12 rounded-2xl bg-[#07110a]/72 p-8 text-left">
-          <p className="font-montserrat text-lg text-[#ead9b8] leading-relaxed mb-6">
-            {project.description}
-          </p>
-          <p className="font-montserrat text-base text-[#bca585]">
-            Demo video coming soon.
-          </p>
-        </div>
-      </main>
-    </div>
+          <div className="mt-8 w-full max-w-4xl rounded-2xl border border-white/10 bg-neutral-900 p-5 text-left sm:p-8">
+            <p className="font-montserrat text-lg text-gray-200 leading-relaxed mb-6">
+              {project.description}
+            </p>
+            <p className="font-montserrat text-base text-gray-400">
+              Demo video coming soon.
+            </p>
+          </div>
+        </main>
+      </div>
   );
 }
