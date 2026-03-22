@@ -208,12 +208,12 @@ export function MimesisLanding() {
   };
 
   return (
-    <div className="relative h-[100dvh] overflow-y-auto overflow-x-hidden bg-[#031008] text-[#e6cfaa]">
+    <div className="relative h-[100dvh] overflow-y-auto overflow-x-hidden bg-transparent text-[#e6cfaa]">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-12rem] top-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#d86a10]/14 blur-3xl" />
-        <div className="absolute right-[-10rem] top-[20%] h-[24rem] w-[24rem] rounded-full bg-[#8e6f38]/10 blur-3xl" />
-        <div className="absolute bottom-[-8rem] left-[18%] h-[18rem] w-[18rem] rounded-full bg-[#b39a65]/10 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(223,200,166,0.08),transparent_45%),linear-gradient(to_bottom,rgba(255,255,255,0.02),transparent_16%,transparent_84%,rgba(0,0,0,0.35))]" />
+        <div className="absolute left-[-12rem] top-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#d86a10]/10 blur-3xl" />
+        <div className="absolute right-[-10rem] top-[20%] h-[24rem] w-[24rem] rounded-full bg-[#8e6f38]/8 blur-3xl" />
+        <div className="absolute bottom-[-8rem] left-[18%] h-[18rem] w-[18rem] rounded-full bg-[#b39a65]/8 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(223,200,166,0.05),transparent_42%),linear-gradient(to_bottom,rgba(255,255,255,0.015),transparent_16%,transparent_84%,rgba(0,0,0,0.18))]" />
       </div>
 
       <main className="relative mx-auto flex w-full max-w-7xl flex-col gap-20 px-4 py-8 sm:px-6 lg:px-8">

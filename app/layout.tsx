@@ -16,16 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="antialiased cursor-none"
-      >
+      <body className="antialiased cursor-none">
         <InteractiveGridPattern
           proximity={200}
           borderColor="rgba(228, 200, 156, 0.12)"
         >
           <SmoothCursor />
           {children}
-          <div className="fixed top-6 left-0 right-0 z-50 pointer-events-none flex justify-center">
+          <div className="fixed top-4 left-0 right-0 z-50 pointer-events-none flex justify-end px-4 sm:top-6 sm:justify-center sm:px-0">
             <div className="pointer-events-auto">
               <BottomDock />
             </div>

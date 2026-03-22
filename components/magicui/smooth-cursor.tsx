@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion, useMotionValue, useSpring, animate } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useState, useCallback, useRef } from "react";
 
 interface SmoothCursorProps {
@@ -10,13 +10,13 @@ interface SmoothCursorProps {
 
 export function SmoothCursor({ className }: SmoothCursorProps) {
     const [isVisible, setIsVisible] = useState(false);
-    const [isTouchDevice, setIsTouchDevice] = useState(false);
+    const [isTouchDevice] = useState(
+        () =>
+            typeof window !== "undefined" &&
+            ("ontouchstart" in window || navigator.maxTouchPoints > 0)
+    );
     const prevPosition = useRef({ x: 0, y: 0 });
     const currentAngle = useRef(0);
-
-    useEffect(() => {
-        setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
-    }, []);
 
     const cursorX = useMotionValue(-100);
     const cursorY = useMotionValue(-100);
@@ -36,18 +36,13 @@ export function SmoothCursor({ className }: SmoothCursorProps) {
 
             const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
             if (distance > 5) {
-                // Calculate target angle
                 let targetAngle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) + 135;
+                const angleDiff = targetAngle - currentAngle.current;
+                const normalizedDiff = ((angleDiff + 180) % 360) - 180;
 
-                // Normalize to find shortest rotation path (allows anticlockwise)
-                let diff = targetAngle - currentAngle.current;
-
-                // Normalize difference to -180 to 180 range
-                while (diff > 180) diff -= 360;
-                while (diff < -180) diff += 360;
-
-                currentAngle.current = currentAngle.current + diff;
-                rotation.set(currentAngle.current);
+                targetAngle = currentAngle.current + normalizedDiff;
+                currentAngle.current = targetAngle;
+                rotation.set(targetAngle);
             }
 
             prevPosition.current = { x: e.clientX, y: e.clientY };
@@ -84,6 +79,7 @@ export function SmoothCursor({ className }: SmoothCursorProps) {
                 rotate: springRotation,
                 opacity: isVisible ? 1 : 0,
                 transformOrigin: "8px 5px",
+                filter: "drop-shadow(0 2px 3px rgba(0,0,0,0.35))",
             }}
         >
             <svg
