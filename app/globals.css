@@ -15,8 +15,10 @@ textarea,
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #031008;
+  --foreground: #ead9b8;
+  --font-explora: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-montserrat: "Avenir Next", "Segoe UI", Inter, system-ui, sans-serif;
 }
 
 @theme inline {
@@ -30,15 +32,15 @@ textarea,
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #031008;
+    --foreground: #ead9b8;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat);
 }
 
 /* Hide main scrollbar - scrolling handled by content layer */
@@ -59,16 +61,16 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgba(34, 211, 238, 0.3);
+  background: rgba(216, 106, 16, 0.3);
   border-radius: 4px;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: rgba(34, 211, 238, 0.5);
+  background: rgba(216, 106, 16, 0.5);
 }
 
 /* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(34, 211, 238, 0.3) transparent;
+  scrollbar-color: rgba(216, 106, 16, 0.3) transparent;
 }

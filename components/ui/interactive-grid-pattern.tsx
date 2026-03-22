@@ -1,4 +1,5 @@
 "use client"
+/* eslint-disable react-hooks/refs, react-hooks/exhaustive-deps */
 
 import { useState, useEffect, useRef, useCallback, useMemo, memo } from "react"
 import { cn } from "@/lib/utils"
@@ -51,17 +52,17 @@ const GridCell = memo(function GridCell({
                 width: cellSize,
                 height: cellSize,
                 borderColor: proximityFactor > 0
-                    ? `rgba(34, 211, 238, ${Math.max(0.05, proximityFactor * 0.4)})`
+                    ? `rgba(216, 106, 16, ${Math.max(0.06, proximityFactor * 0.42)})`
                     : borderColor,
                 background: activeHover
-                    ? `radial-gradient(circle, rgba(147, 51, 234, 0.9) 0%, rgba(34, 211, 238, 0.6) 100%)`
+                    ? `radial-gradient(circle, rgba(234, 173, 77, 0.9) 0%, rgba(216, 106, 16, 0.6) 100%)`
                     : proximityFactor > 0
-                        ? `radial-gradient(circle, rgba(147, 51, 234, ${proximityFactor * 0.5}) 0%, rgba(34, 211, 238, ${proximityFactor * 0.3}) 100%)`
+                        ? `radial-gradient(circle, rgba(234, 173, 77, ${proximityFactor * 0.5}) 0%, rgba(216, 106, 16, ${proximityFactor * 0.32}) 100%)`
                         : "transparent",
                 boxShadow: activeHover
-                    ? `0 0 ${30 * gridScale}px rgba(147, 51, 234, 0.8), 0 0 ${60 * gridScale}px rgba(34, 211, 238, 0.5)`
+                    ? `0 0 ${30 * gridScale}px rgba(216, 106, 16, 0.72), 0 0 ${60 * gridScale}px rgba(234, 173, 77, 0.45)`
                     : proximityFactor > 0.3
-                        ? `0 0 ${15 * gridScale}px rgba(147, 51, 234, ${proximityFactor * 0.4})`
+                        ? `0 0 ${15 * gridScale}px rgba(216, 106, 16, ${proximityFactor * 0.4})`
                         : "none",
                 transitionDuration: isMoving ? "150ms" : "800ms",
             }}
@@ -75,8 +76,8 @@ export function InteractiveGridPattern({
     className,
     children,
     cellSize = 50,
-    glowColor = "rgba(34, 211, 238, 0.4)",
-    borderColor = "rgba(63, 63, 70, 0.4)",
+    glowColor = "rgba(216, 106, 16, 0.28)",
+    borderColor = "rgba(228, 200, 156, 0.14)",
     proximity = 100,
 }: InteractiveGridPatternProps) {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -271,7 +272,7 @@ export function InteractiveGridPattern({
     return (
         <div
             ref={containerRef}
-            className={cn("fixed inset-0 overflow-hidden bg-neutral-950", className)}
+            className={cn("fixed inset-0 overflow-hidden bg-[#031008]", className)}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
@@ -294,7 +295,7 @@ export function InteractiveGridPattern({
             <div
                 className="pointer-events-none absolute inset-0"
                 style={{
-                    background: "radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(10,10,10,0.8) 100%)",
+                    background: "radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(1,6,3,0.88) 100%)",
                 }}
             />
 
@@ -304,7 +305,7 @@ export function InteractiveGridPattern({
                     className="relative z-10 h-full w-full overflow-y-auto"
                     style={{
                         scrollbarWidth: 'thin',
-                        scrollbarColor: 'rgba(34, 211, 238, 0.3) transparent',
+                        scrollbarColor: 'rgba(216, 106, 16, 0.3) transparent',
                     }}
                 >
                     {children}
