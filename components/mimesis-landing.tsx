@@ -208,12 +208,12 @@ export function MimesisLanding() {
   };
 
   return (
-    <div className="relative h-[100dvh] snap-y snap-mandatory scroll-smooth overflow-y-auto overflow-x-hidden bg-transparent text-[#e6cfaa]">
+    <div className="relative h-[100dvh] scroll-smooth overflow-y-auto overflow-x-hidden bg-transparent text-[#e6cfaa] lg:snap-y lg:snap-mandatory">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-12rem] top-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#d86a10]/10 blur-3xl" />
         <div className="absolute right-[-10rem] top-[20%] h-[24rem] w-[24rem] rounded-full bg-[#8e6f38]/8 blur-3xl" />
         <div className="absolute bottom-[-8rem] left-[18%] h-[18rem] w-[18rem] rounded-full bg-[#b39a65]/8 blur-3xl" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(223,200,166,0.05),transparent_42%),linear-gradient(to_bottom,rgba(255,255,255,0.015),transparent_16%,transparent_84%,rgba(0,0,0,0.18))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(223,200,166,0.05),transparent_42%),linear-gradient(to_bottom,rgba(255,255,255,0.015),transparent_16%,transparent_84%,rgba(0,0,0,0.18))]" />
       </div>
 
       <main className="relative mx-auto flex w-full max-w-[min(96vw,1780px)] flex-col gap-20 px-4 py-8 sm:px-6 lg:px-8 2xl:px-10">
@@ -349,7 +349,7 @@ export function MimesisLanding() {
 
         <section
           ref={signupRef}
-          className="grid snap-start gap-8 rounded-[40px] border border-[#e4c89c]/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.14))] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.28)] lg:grid-cols-[0.95fr_1.05fr] lg:p-8"
+          className="mb-[max(6rem,env(safe-area-inset-bottom))] grid snap-start gap-8 rounded-[40px] border border-[#e4c89c]/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.14))] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.28)] lg:mb-0 lg:grid-cols-[0.95fr_1.05fr] lg:p-8"
         >
           <motion.div
             initial={{ opacity: 0, y: 24 }}
