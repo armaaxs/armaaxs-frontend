@@ -1,0 +1,150 @@
+Perfect timing. Here’s a practical legal pack you can use for Play Store launch.
+ 
+Not legal advice, but this is production-grade starter language you can publish now and refine with counsel later.
+ 
+1) Privacy Policy (paste as a page)
+Mimesa Privacy Policy Effective date: May 23, 2026
+ 
+Mimesa (“we”, “our”, “us”) provides an audiobook and narration app (“App”). This Privacy Policy explains what information we collect, how we use it, and your rights.
+ 
+Information We Collect
+We may collect:
+ 
+1. Account Information
+	•	Email address and authentication identifiers when you sign in.
+ 
+2. App Data
+	•	Books you save, chapters, reading/listening progress, playback preferences (for example narration voice), and app settings.
+ 
+3. User Content and Requests
+	•	Text submitted for narration generation.
+	•	Report/feedback submissions you send in-app.
+ 
+4. Technical and Usage Data
+	•	Device/app diagnostics, crash logs, performance data, and request metadata needed to operate and debug the service.
+ 
+5. Third-Party Source Data
+	•	Metadata and audio links from public catalog providers (for example LibriVox, Gutendex) when you browse/search content.
+ 
+How We Use Information
+We use information to:
+ 
+	•	Provide core app features (library, playback, narration generation, syncing).
+	•	Save your progress and preferences across devices.
+	•	Cache generated audio and improve playback performance.
+	•	Monitor reliability, prevent abuse, and enforce usage limits.
+	•	Respond to support requests and improve the App.
+ 
+Legal Bases (where applicable)
+Depending on your region, we process data under one or more of:
+	•	Performance of a contract (providing the App),
+	•	Legitimate interests (security, reliability, product improvement),
+	•	Consent (where required).
+ 
+Sharing
+We do not sell personal information. We may share data with service providers that help us operate the App, such as:
+ 
+	•	Authentication/database providers,
+	•	Cloud storage/CDN providers,
+	•	Compute/inference providers,
+	•	Analytics/error monitoring providers.
+ 
+These providers process data on our behalf under contractual controls.
+ 
+Data Retention
+We keep data for as long as needed to provide the App and for legitimate business/legal purposes. You may request deletion of your account data (see Contact section).
+ 
+Your Rights
+Depending on your location, you may have rights to access, correct, export, or delete your data, and to object to or restrict certain processing. Contact us to exercise rights.
+ 
+Children
+The App is not directed to children under 13 (or the minimum age in your country). If you believe a child provided data, contact us and we will take appropriate steps.
+ 
+Security
+We use reasonable technical and organizational measures to protect data. No method of transmission/storage is 100% secure.
+ 
+International Transfers
+Your data may be processed in countries other than your own. We apply appropriate safeguards where required.
+ 
+Changes
+We may update this Privacy Policy. We will update the effective date above and, where required, provide additional notice.
+ 
+Contact
+For privacy requests or questions: Email: privacy@mimesa.app (Replace with your real support/privacy email before publishing.)
+ 
+
+ 
+2) Terms of Use (paste as a page)
+Mimesa Terms of Use Effective date: May 23, 2026
+ 
+By using Mimesa, you agree to these Terms.
+ 
+1. Service
+Mimesa provides reading/listening tools, including third-party catalog discovery and AI narration generation. Features may change over time.
+ 
+2. Accounts
+You are responsible for your account and activity under it. Provide accurate information and keep credentials secure.
+ 
+3. Acceptable Use
+You agree not to:
+ 
+	•	Violate laws or third-party rights.
+	•	Upload or process content you do not have rights to use.
+	•	Circumvent rate limits, security controls, or usage restrictions.
+	•	Reverse engineer, disrupt, or abuse the service.
+ 
+We may suspend/limit access for abuse or policy violations.
+ 
+4. Content and Rights
+	•	You retain rights in content you submit, to the extent permitted by law.
+	•	You grant us a limited license to process content solely to operate the App (generation, storage, sync, playback, support, security).
+	•	Third-party books/audio/metadata remain owned by their respective rights holders and sources.
+ 
+5. AI/Generated Output
+Generated narration may contain errors, omissions, or quality issues. You are responsible for review and lawful use of outputs.
+ 
+6. Third-Party Services
+The App depends on third-party services and public content sources. Availability, quality, and terms of those services may affect your experience.
+ 
+7. Availability and Changes
+The service is provided “as is” and may be modified, interrupted, or discontinued at any time.
+ 
+8. Disclaimer
+To the maximum extent permitted by law, we disclaim implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.
+ 
+9. Limitation of Liability
+To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages, or loss of data/profits/use.
+ 
+10. Termination
+You may stop using the App at any time. We may suspend or terminate access for violations, abuse, or operational/security reasons.
+ 
+11. Governing Law
+These Terms are governed by the laws of your chosen jurisdiction. (Replace with your jurisdiction, e.g., “laws of the United Arab Emirates, without regard to conflict of laws.”)
+ 
+12. Contact
+Email: support@mimesa.app (Replace with your real support email.)
+ 
+
+ 
+3) In-App “Delete My Data” text (for Play requirement readiness)
+Use this in Settings/help screen and store listing support text:
+ 
+Delete Account & Data You can request deletion of your account and associated app data by emailing privacy@mimesa.app from your account email with subject “Delete My Data”. We may retain limited records where required by law, fraud prevention, or security obligations.
+ 
+
+ 
+4) Play Store “Data Safety” practical mapping (quick)
+Given your app, likely declarations are:
+ 
+	•	Data collected: Personal info (email), app activity, app info/performance, user content (narration text), identifiers (auth IDs).
+	•	Data shared: With service providers only (not sold).
+	•	Purpose: App functionality, analytics, fraud/security, account management.
+	•	Encryption in transit: Yes.
+	•	Deletion request supported: Yes (email/workflow above).
+ 
+
+ 
+If you want, I can next produce:
+1. a short-form privacy policy page for website footer,  
+2. exact Play Console questionnaire answers in checkbox format,  
+3. region-specific addendum (GDPR/CCPA-lite) you can attach immediately.
