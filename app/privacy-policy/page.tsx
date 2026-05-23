@@ -162,7 +162,7 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-[#ead9b8]">Contact</h2>
               <p className="mb-2">For privacy requests or questions:</p>
-              <p>Email: <a href="mailto:privacy@mimesa.app" className="text-[#d86a10] hover:text-[#e4c89c] transition-colors underline underline-offset-4">privacy@mimesa.app</a></p>
+              <p>Email: <a href="mailto:armaan@armaaxs.com" className="text-[#d86a10] hover:text-[#e4c89c] transition-colors underline underline-offset-4">armaan@armaaxs.com</a></p>
             </section>
           </div>
         </motion.div>
